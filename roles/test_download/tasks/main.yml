@@ -1,0 +1,17 @@
+---
+# tasks file for sample-role
+- name: Create K8s dependency directory
+  file:
+    path: /tmp/releases1
+    state: directory
+    mode: '0755'
+
+- name: Create certs directory
+  file:
+    path: /tmp/certs1
+    state: directory
+    mode: '0755'
+
+
+- name: Download simple dependency
+  shell: "wget https://wordpress.org/latest.tar.gz -O /tmp/releases1/latest.tar.gz"
