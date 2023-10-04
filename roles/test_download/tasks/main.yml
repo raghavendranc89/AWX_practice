@@ -1,12 +1,14 @@
 ---
 # tasks file for sample-role
 - name: Create K8s dependency directory
+  become: yes
   file:
     path: /tmp/releases1
     state: directory
     mode: '0755'
 
 - name: Create certs directory
+  become: yes
   file:
     path: /tmp/certs1
     state: directory
