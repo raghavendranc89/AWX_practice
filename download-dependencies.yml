@@ -6,7 +6,7 @@
   tasks:
     -  name: Checking the reachability of nodes provided in the inventory
        action: ping
-	   
+
 - hosts: all
   gather_facts: true
   connection: local
