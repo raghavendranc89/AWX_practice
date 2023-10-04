@@ -11,6 +11,6 @@
   gather_facts: true
   connection: local
   any_errors_fatal: true
-  become: yes
+  #  become: yes
   roles:
     - { role: test_download, tags: downloading }
