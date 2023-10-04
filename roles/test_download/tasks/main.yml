@@ -14,4 +14,4 @@
 
 
 - name: Download simple dependency
-  shell: "wget https://wordpress.org/latest.tar.gz -O /tmp/releases1/latest.tar.gz"
+  command: "wget https://wordpress.org/latest.tar.gz -O /tmp/releases1/latest.tar.gz"
