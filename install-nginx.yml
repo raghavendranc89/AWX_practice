@@ -4,10 +4,12 @@
       docker_image:
         name: nginx
         source: pull
+
     - name: Create volume
       docker_volume:
         name: nginx-data
         driver: local
+
     - name: Run nginx Docker container
       docker_container:
         name: nginx
@@ -16,4 +18,4 @@
         ports:
           - "80:80"
         volumes:
-          - "nginx-data:/usr/share/nginx/html:ro"	
+          - "nginx-data:/usr/share/nginx/html:ro"
