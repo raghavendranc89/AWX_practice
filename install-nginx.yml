@@ -1,17 +1,18 @@
 - hosts: localhost
+  gather_facts: no  # Disable gathering facts on the local machine
   tasks:
     - name: Pull nginx Docker image
-      docker_image:
+      community.docker.docker_image:
         name: nginx
         source: pull
 
     - name: Create volume
-      docker_volume:
+      community.docker.docker_volume:
         name: nginx-data
         driver: local
 
     - name: Run nginx Docker container
-      docker_container:
+      community.docker.docker_container:
         name: nginx
         image: nginx
         state: started
@@ -19,3 +20,4 @@
           - "80:80"
         volumes:
           - "nginx-data:/usr/share/nginx/html:ro"
+
