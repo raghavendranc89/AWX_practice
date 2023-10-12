@@ -1,0 +1,8 @@
+# [localhost] section has the ansible-controller host details
+# ansible-constroller is the node from where we trigger the ansible-playbook commands.
+[localhost]
+#server1  ansible_ssh_host=10.1.4.125  ansible_ssh_user=user ansible_ssh_pass=Cal$0ft@#2022 ansible_sudo_pass=Cal$0ft@#2022
+
+#[all]
+
+#server1  ansible_ssh_host=10.1.4.125  ansible_ssh_user=user ansible_ssh_pass=Cal$0ft@#2022 ansible_sudo_pass=Cal$0ft@#2022
